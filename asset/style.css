@@ -1,0 +1,177 @@
+ /* basic css */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;                                                                                                                                    
+ }
+ ul, ol {
+    list-style: none;
+ }
+ a {
+    text-decoration: none;
+ }
+ conlainer{
+    width:690px ;
+    margin: 0 auto;
+ }
+ .box {
+    width: 100px;
+    height: 100px;
+    bottom: 2px solid red;
+    margin: 100px auto;
+    position: relative;
+ }
+ /* after or befor stard */
+ .box::after{
+   content: ;
+   width: 50px;
+   height: 50px;
+   background-color: brown;
+   /* display: block; */
+   position: absolute;
+   left: 0;
+   bottom: 0;
+ }
+ /* after with hover */
+ .box:hover::after{
+   width: 200px;
+   height: 200px;
+   transition: all ease 4s;
+ }
+ .main-manu {
+   display: flex;
+   margin: 100px auto;
+
+ }
+ .main-manu li a {
+   display: inline-block;
+   margin: 0 10px;
+   font-size: 18px;
+   position: relative;
+   z-index: 1;
+   padding: 20px 30px;
+ }
+ .main-manu li a::after {
+   content: '';
+   width: 5px;
+   height: 100%;
+   background-color: red;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   transition: all ease 2s;
+
+ }
+ .main-manu li a:hover:after {
+   width: 100px;
+
+ }
+ /* .box .small box{
+    width: 50px;
+    height: 50;
+    background-color: red;
+ } */
+
+ /* ul li::after {
+   content: 'MD';
+ }
+ ul li::before {
+   content: 'islam';
+ } */
+  .practice {
+    margin-bottom: 200px;
+  }
+  .practice li:first-child{
+    background-color: aquamarine;
+  } 
+  .practice li:last-child {
+    background-color: chocolate;
+
+  }
+  .practice li:nth-child(5) {
+    background-color: blue;
+  }
+  .practice li:nth-child(2),
+  .practice li:nth-child(3),
+  .practice li:nth-child(4),
+  .practice li:nth-child(5){
+    background-color: bisque;
+  }
+  .practice li:nth-child(2n){
+    background-color: coral;
+  
+  }
+  .practice li:nth-child(2-1){
+    background-color: chartreuse;
+  }
+  /* animation stard */
+  .animation-parent{
+    width: 600px;
+    height: 600px;
+    border: 1px solid red;
+    margin: 100px auto;
+    position: relative;
+
+  }
+  .animation-box {
+    width: 50px;
+    height: 50px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: rotate(0);
+    animation-name: amin;
+    animation-duration: 2s;
+    animation-timing-function: infinite;
+    /* animation-timing-function: linear; */
+    animation-iteration-count: 3;
+    /*  all time ranig*/
+    animation-iteration-count: infinite;
+   /* animation-direction: alternate;
+   animation-direction: reverse; */
+   /* animation-direction: alternate-reverse; */
+   animation-delay: 5s;
+}
+@keyframes amin {
+  form{ 
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+@keyframes amin {
+  form{
+    left: 0;
+    top: 0;
+  }
+  to{
+    /* right: 0; */
+    left: 500px;
+    top: 0;
+  }
+  
+}
+/* @keyframes amin {
+  0%{
+    left: 0;
+    top: 0;
+  }
+  25%{
+    left: 550;
+    top: 0;
+  }
+  50%{
+    left: 550px;
+    top: 550px;
+  }
+  75%{
+    left: 0;
+    top: 550px;
+  }
+  100%{
+    left: 0;
+    top: 0;
+  }
+} */
